@@ -131,9 +131,10 @@ export class AssistantMessageComponent extends Container {
 						new Text(theme.italic(theme.fg("thinkingText", this.hiddenThinkingLabel)), this.outputPad, 0),
 					);
 				} else {
-					// Render each run of thinking blocks as one Markdown section.
+					// Render each run of thinking blocks as one Markdown section with emoji prefix.
+					const displayText = "🤔 " + thinkingBlocks.join("\n\n");
 					this.contentContainer.addChild(
-						new Markdown(thinkingBlocks.join("\n\n"), this.outputPad, 0, this.markdownTheme, {
+						new Markdown(displayText, this.outputPad, 0, this.markdownTheme, {
 							color: (text: string) => theme.fg("thinkingText", text),
 							italic: true,
 						}),

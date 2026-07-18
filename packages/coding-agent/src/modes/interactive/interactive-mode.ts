@@ -341,7 +341,7 @@ export class InteractiveMode {
 	private workingVisible = true;
 	private workingIndicatorOptions: WorkingIndicatorOptions | undefined = undefined;
 	private readonly defaultWorkingMessage = "Working...";
-	private readonly defaultHiddenThinkingLabel = "Thinking...";
+	private readonly defaultHiddenThinkingLabel = "🤔 Thinking...";
 	private hiddenThinkingLabel = this.defaultHiddenThinkingLabel;
 
 	private lastSigintTime = 0;
